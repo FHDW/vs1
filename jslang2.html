@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSLang 3</title>
+</head>
+<body>
+    <!-- 1 -->
+    <h1>HTML DOM via JS</h1>
+    <hr />
+
+    <h3>html ruft js auf</h3>
+        <button onclick="alert('Click')">Clickmich</button>
+    <hr />
+
+    <!-- 2 -->
+    <h3>JS manipuliert html Elemente</h3>
+        <div id="tag1">Ich bin HTML</div>
+        <button onclick="
+        document.getElementById('tag1').innerHTML = 'Ich bin JS';">Ich ändere html</button>
+        ">Ich ändere html</button>
+    <hr />
+
+    <!-- 3 -->
+    <h3>Javascript erzeugt Interaktion</h3>
+        <p id="myOutput">Mein Output</p>
+        <input type="text" id="myInput" />
+        <button id="myButton" onclick="ChangeText()">Drück mich</button>
+
+        <script>
+            function ChangeText() {
+                var input = document.getElementById("myInput").value;
+                document.getElementById("myOutput").innerHTML = input;
+            }
+        </script>
+
+    <hr />
+
+    <!-- 4 -->
+    <h3>JS Events</h3>
+        <div id="tag3" onmouseover="ChangeText()">Hover me</div>
+
+</body>
+</html>

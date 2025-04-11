@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    <title>Javascript Language</title>
+</head>
+<body>
+    <h2>Javascript</h2>
+    <p id="demo">Mein Paragraph</p>
+
+    <script>
+        // Alert
+        //window.alert("Hallo Welt!");
+
+        console.log("Script gestartet");
+        document.writeln("Mein Text");
+        document.write(5+6);
+
+        document.getElementById("demo").innerHTML = "Wau";
+
+        var pi = 3.14;
+        console.log(pi);
+
+        var person="Peter";
+        console.log(person);
+        var person = "Peter1";
+
+        document.getElementById("demo").innerHTML = person + " ist ein Mensch";
+        var x = pi+person;
+        console.log(x);
+
+        var inBlock = "Innerhalb";
+        {
+            //var inBlock = "Innerhalb Block";
+            let  inBlock = "Innerhalb Block";
+            console.log(inBlock);
+        }
+        console.log(inBlock);   
+
+        // === 
+        if (person=="Peter") {
+            console.log("Peter ist ein Mensch");
+        } else {
+            console.log("Peter ist kein Mensch");
+        }
+
+        for (let i=0;i<4;i++){
+            console.log(i);
+        }
+
+        //Funktionen
+        function toCelsius(fahrenheit) {
+            return (5/9) * (fahrenheit-32);
+        }
+        text = "Die Temepratur ist " + toCelsius(32) + " Celsius";
+        console.log(text);
+
+        // Objkekte
+        var fahrzeug = new Object();    
+        console.log(fahrzeug);
+
+        fahrzeug.tueren = 5;
+        console.log(fahrzeug);
+
+        fahrzeug.reader=4;
+        fahrzeug.geschwindigkeit = 0;
+        console.log(fahrzeug);
+
+        fahrzeug.beschleunigen = function (speed) {
+            this.geschwindigkeit += speed;
+            console.log("Die Geschwindigkeit ist " + this.geschwindigkeit);
+        }
+
+        fahrzeug.beschleunigen(10);
+
+        auto = {
+            tueren: 5,
+            reader: 4,
+            besitzer: {
+                vorname: "Peter",
+                nachname: "Tutt"
+            }
+                
+            
+        }
+        console.log(auto);
+
+        //Arrays
+        var car1 = "Volvo";
+        var car2 = "BMW";
+        var car3 = "Mercedes";
+
+        var cars = ["Volvo", "BMW", "Mercedes"];
+        console.log(cars);
+        console.log(cars[0]);
+        console.log(cars[1]);
+
+        //Kurzform
+        var Arrays = [];
+        Arrays[0] = "Volvo";
+        Arrays[1] = "BMW";  
+        console.log(Arrays[0]);
+        console.log(Arrays[1]);
+
+        var myArray = new Array;
+        myArray[0] = 14.3;
+        myArray[1] = "Hallo";
+        myArray[2] = fahrzeug;
+        myArray[3] = auto;
+
+        myArray[4] = function ()  {console.log("Funtionsaufruf in Objekt")}
+
+        myArray[4]();
+
+        console.log(myArray);
+
+        points = [40, 100, 1, 5, 25, 10];
+        console.log(points);
+        var sortedPoints = points.sort();
+        console.log(sortedPoints);
+
+        function NumSort(a,b) {
+            return a - b;
+        }
+        var sortedPoints = points.sort(NumSort);
+        console.log(sortedPoints);
+
+    </script>
+</body>
+</html>
